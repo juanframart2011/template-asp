@@ -1,0 +1,26 @@
+/* your styles go here */
+
+@media (max-width: 991.98px){
+	nav.navbar  {
+	    background: #C0360E !important;
+	    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+	    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+	}
+
+	.dMejora{
+		padding-bottom: 40px !important;
+		padding-top: 80px !important;
+	}
+	.mac{
+		position: relative !important;
+	    top: 0px !important;
+	    width: 100%;
+	}
+
+	.intro-image{
+		margin-left: inherit !important;
+	}
+	#imPrincipal{
+		margin-left:-100px;
+	}
+}
