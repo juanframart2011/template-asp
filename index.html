@@ -1,949 +1,691 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <meta name="description" content="Punto de venta para imprentas y diseñadores gráficos online ">
-        <meta name="keywords" content="Impresión de lona, impresión digital, offset, sublimación, ponchado, bordado, serigrafia">
-        <meta http-equiv="Content-Language" content="es">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="revisit-after" content="7 days">
-        <meta name="author" content="">
-        <meta name="language" content="Spanish">
-        <meta name="distribution" content="Global">
-        <meta property="og:site_name" content="AdmiPrint : el punto de venta para imprentas mas completo del mercado  online ">
-        <meta property="og:type" content="website">
-        <meta property="og:locale" content="es">
-        <meta property="og:title" content="AdmiPrint punto de venta para imprentas  online ">
-        <meta property="og:description" content="Punto de venta para imprentas y diseñadores gráficos  online . ventas, inventarios, cotizaciones, comisiones, facturación, insumos, talleres, máquinas y contadores, consumibles">
-        <meta property="og:keywords" content="Impresión de lona, impresión digital, offset, sublimación, ponchado, bordado, serigrafia  online ">
-        <meta name="google-site-verification" content="_1cblNpK-wMDdc5SbZgAkd86mXux8to9wQEnwWEhTC8" />
-        <title>Admiprint : Sistema punto de venta para imprentas  online</title>
-        <meta name="robots" content="all,follow">
-        <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-        <!-- Custom stylesheet - for your changes-->
-        <link rel="stylesheet" href="css/custom.css">
-        <!-- Favicon-->
-        <link rel="shortcut icon" href="img/favicon.png">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
-        <link rel="stylesheet" href="fonts/flaticon.css">
-        <script src="js/plugin/jquery.cookie/jquery.cookie.js"></script>
-        <script src="js/front.js"></script>
-        <style>
-            .grecaptcha-badge{
-            right: -10800px !important;
-            }
-            h2{
-            font-size:2.5rem !important;
-            }
-            a:hover, a:focus {
-            color: #fff;
-            }
-            #stripes {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            -webkit-transform: skewY(-12deg);
-            transform: skewY(-12deg);
-            -webkit-transform-origin: 0;
-            transform-origin: 0;
-            background: linear-gradient(150deg,#E03C25 15%,#EE4F21 50%,#C0360E 74%);
-            top:-100px;
-            }
-            #stripes, #stripes span {
-            position: absolute;
-            }
-            @media (min-width: 880px){
-            #stripes :first-child {
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="description" content="Punto de venta para imprentas y diseñadores gráficos online ">
+    <meta name="keywords" content="Impresión de lona, impresión digital, offset, sublimación, ponchado, bordado, serigrafia">
+    <meta http-equiv="Content-Language" content="es">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="">
+    <meta name="language" content="Spanish">
+    <meta name="distribution" content="Global">
+    <meta property="og:site_name" content="AdmiPrint : el punto de venta para imprentas mas completo del mercado  online ">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es">
+    <meta property="og:title" content="AdmiPrint punto de venta para imprentas  online ">
+    <meta property="og:description" content="Punto de venta para imprentas y diseñadores gráficos  online . ventas, inventarios, cotizaciones, comisiones, facturación, insumos, talleres, máquinas y contadores, consumibles">
+    <meta property="og:keywords" content="Impresión de lona, impresión digital, offset, sublimación, ponchado, bordado, serigrafia  online ">
+    <meta name="google-site-verification" content="_1cblNpK-wMDdc5SbZgAkd86mXux8to9wQEnwWEhTC8" />
+    <title>SyAdmin : Sistema punto de venta para imprentas  online</title>
+    <meta name="robots" content="all,follow">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+    <link rel="stylesheet" href="fonts/flaticon.css">
+    <script src="js/plugin/jquery.cookie/jquery.cookie.js"></script>
+    <script src="js/front.js"></script>
+    <style>
+    .grecaptcha-badge{
+        right: -10800px !important;
+    }
+    h2{
+        font-size:2.5rem !important;
+    }
+    a:hover, a:focus {
+        color: #fff;
+    }
+    #stripes {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        -webkit-transform: skewY(-12deg);
+        transform: skewY(-12deg);
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+        background: linear-gradient(150deg,#E03C25 15%,#EE4F21 50%,#C0360E 74%);
+        top:-100px;
+    }
+    #stripes, #stripes span {
+        position: absolute;
+    }
+    @media (min-width: 880px){
+        #stripes :first-child {
             width: 33.33333%;
             left: -16.66666%;
             background: rgba(255,255,255,0.1);
-            }
-            }
-            @media (min-width: 670px){
-            #stripes :first-child {
+        }
+    }
+    @media (min-width: 670px){
+        #stripes :first-child {
             top: 0;
             background: rgba(255,255,255,0.1);
-            }
-            }
-            @media (min-width: 880px){
-            #stripes span {
+        }
+    }
+    @media (min-width: 880px){
+        #stripes span {
             height: 190px;
-            }
-            }
-            #stripes :first-child {
-            width: 50%;
-            left: 50%;
-            top: 270px;
-            background: rgba(255,255,255,0.1);
-            }
-            #stripes :nth-child(3){
-            margin-top: 300px;
-            width: 20%;
-            background-color: orange;
-            opacity: 0.1;
-            }
-            @media (min-width: 880px){
-            #stripes :nth-child(2) {
+        }
+    }
+    #stripes :first-child {
+        width: 50%;
+        left: 50%;
+        top: 270px;
+        background: rgba(255,255,255,0.1);
+    }
+    #stripes :nth-child(3){
+        margin-top: 300px;
+        width: 20%;
+        background-color: orange;
+        opacity: 0.1;
+    }
+    @media (min-width: 880px){
+        #stripes :nth-child(2) {
             width: 23.33333%;
             top: 170px;
             left: 16.66666%;
             right: auto;
             background: rgba(255,255,255,0.05);
-            }
-            }
-            @media (min-width: 880px){
-            #stripes :nth-child(5) {
+        }
+    }
+    @media (min-width: 880px){
+        #stripes :nth-child(5) {
             width: 33.33333%;
             bottom: 0;
             background: rgba(255,255,255,0.1);
-            }
-            }
-            @media (min-width: 880px){
-            #stripes :nth-child(4) {
+        }
+    }
+    @media (min-width: 880px){
+        #stripes :nth-child(4) {
             width: 33.33333%;
             top: 580px;
             right: -16.66666%;
             background: rgba(255,255,255,0.1);
             opacity: 0.5;
-            }
-            }
+        }
+    }
+    </style>
+</head>
+<body style="overflow-x: hidden;">
+    <a href="https://wa.me/" target="_blank" class="whatsapp_call">
+
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2489" height="2500" viewBox="0 0 1219.547 1225.016"><path fill="#E0E0E0" d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"/><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="609.77" y1="1190.114" x2="609.77" y2="21.084"><stop offset="0" stop-color="#20b038"/><stop offset="1" stop-color="#60d66a"/></linearGradient><path fill="url(#a)" d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"/><image overflow="visible" opacity=".08" width="682" height="639" xlink:href="FCC0802E2AF8A915.png" transform="translate(270.984 291.372)"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"/><path fill="#FFF" d="M1036.898 176.091C923.562 62.677 772.859.185 612.297.114 281.43.114 12.172 269.286 12.039 600.137 12 705.896 39.633 809.13 92.156 900.13L7 1211.067l318.203-83.438c87.672 47.812 186.383 73.008 286.836 73.047h.255.003c330.812 0 600.109-269.219 600.25-600.055.055-160.343-62.328-311.108-175.649-424.53zm-424.601 923.242h-.195c-89.539-.047-177.344-24.086-253.93-69.531l-18.227-10.805-188.828 49.508 50.414-184.039-11.875-18.867c-49.945-79.414-76.312-171.188-76.273-265.422.109-274.992 223.906-498.711 499.102-498.711 133.266.055 258.516 52 352.719 146.266 94.195 94.266 146.031 219.578 145.992 352.852-.118 274.999-223.923 498.749-498.899 498.749z"/></svg>
+    </a>
+    <div id="stripes" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <header class="header" id="inicio">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container">
+                    <a href="#inicio" class="navbar-brand opcion"><img src="images/logo-adminprint-min.png" alt="" class="img-fluid"></a>
+                    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
+                    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"> <a href="#inicio" class="opcion nav-link active link-scroll">Inicio</a></li>
+                            <li class="nav-item"> <a href="#funciones" class="opcion nav-link link-scroll">Funciones</a></li>
+                            <li class="nav-item"> <a href="#adquierelo" class="opcion nav-link link-scroll">Adquiérelo</a></li>
+                            <li class="nav-item"> <a href="#contacto" class="opcion nav-link link-scroll">Contacto</a></li>
+                            <li class="nav-item"> <a href="_app/" class="nav-link">Ingresar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <style>
+        nav.navbar.active {
+            background: #E54C2F;
+            -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .nav-link {
+            color: #fff;
+            font-weight: 400;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+        .nav-link:hover  {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 1px;
+        }
+        .nav-link:focus, .nav-link.active{
+            color: #fff;
+        }
+        .leyenda h1{
+            color:#f2f2f2;
+            font-size: 50px;
+            text-align: left;
+        }
+        .leyenda h2{
+            font-size: 20px;
+            font-weight: normal;
+            margin-top:20px;
+        }
+        .leyenda span{
+            color: orange;
+        }
+        .leyenda .contenido{
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #f2f2f2;
+            font-size: 20px;
+            text-align: center;
+        }
+        .pantalla{
+            background: #fff;
+            border-radius: 8px;
+            position: relative;
+            z-index: 5;
+            overflow: hidden;
+            width: 436px;
+            height: 353px;
+            display: block;
+            -webkit-box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3);
+            box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3);
+            left: 50%;
+            -webkit-transform-origin: top center;
+            transform-origin: top center;
+            -webkit-transform: perspective(3190px);
+            transform: perspective(3190px);
+            left:auto;
+            -webkit-box-shadow: 1px 1px 5px 0 rgba(26,26,67,.05), 39px 62.5px 125px -25px rgba(50,50,93,.5), 23.4px 37.5px 75px -37.5px rgba(0,0,0,.6);
+            box-shadow: 1px 1px 5px 0 rgba(26,26,67,.05), 39px 62.5px 125px -25px rgba(50,50,93,.5), 23.4px 37.5px 75px -37.5px rgba(0,0,0,.6);
+            -webkit-transform: scale(1.3) translateX(50px) translateY(0) perspective(3190px) rotateY(-29deg) rotateX(4deg) rotate(1deg);
+            transform: scale(1.3) translateX(50px) translateY(0) perspective(3190px) rotateY(-29deg) rotateX(4deg) rotate(1deg);
+        }
+
+        .whatsapp_call{
+      position: fixed;
+      bottom: 2%;
+      right: 2%;
+      color: green;
+      font-size: 18px;
+      height: 50px;
+      width: 50px;
+      background:white;
+      border-radius: 50%;
+      z-index: 9999999999;
+      text-align: center;
+        box-shadow: 0px 10px 30px -12px black;
+        border: 2px solid white;
+        transition: all .4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
         </style>
-    </head>
-    <body style="overflow-x: hidden;">
-        <div id="stripes" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="container">
-            <header class="header" id="inicio">
-                <nav class="navbar navbar-expand-lg fixed-top">
-                    <div class="container">
-                        <a href="#inicio" class="navbar-brand opcion"><img src="images/logo-adminprint-min.png" alt="" class="img-fluid"></a>
-                        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
-                        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a href="#inicio" class="opcion nav-link active link-scroll">Inicio</a></li>
-                                <li class="nav-item"> <a href="#funciones" class="opcion nav-link link-scroll">Funciones</a></li>
-                                <li class="nav-item"> <a href="contacto.html" class="nav-link">Contacto</a></li>
-                                <li class="nav-item"> <a href="_app/" class="nav-link">Ingresar</a></li>
-                            </ul>
-                            <a href="#punto-venta-gratis" data-toggle="modal" data-target="#login" class="btn btn btn-outline-light opcion navbar-btn ml-0 ml-lg-3 masInfo link-scroll">Comenzar ahora </a>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            <style>
-                nav.navbar.active {
-                background: #E54C2F;
-                -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-                }
-                .nav-link {
-                color: #fff;
-                font-weight: 400;
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
-                }
-                .nav-link:hover  {
-                color: #fff;
-                text-decoration: none;
-                border-bottom: 1px solid #fff;
-                padding-bottom: 1px;
-                }
-                .nav-link:focus, .nav-link.active{
-                color: #fff;
-                }
-                .leyenda h1{
-                color:#f2f2f2;
-                font-size: 50px;
-                text-align: left;
-                }
-                .leyenda h2{
-                font-size: 20px;
-                font-weight: normal;
-                margin-top:20px;
-                }
-                .leyenda span{
-                color: orange;
-                }		
-                .leyenda .contenido{
-                min-height: 400px;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-items: center;
-                align-content: center;
-                flex-wrap: wrap;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: #f2f2f2;
-                font-size: 20px;
-                text-align: center;
-                }
-                .pantalla{
-                background: #fff;
-                border-radius: 8px;
-                position: relative;
-                z-index: 5;
-                overflow: hidden;
-                width: 436px;
-                height: 353px;
-                display: block;
-                -webkit-box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3);
-                box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3);
-                left: 50%;
-                -webkit-transform-origin: top center;
-                transform-origin: top center;
-                -webkit-transform: perspective(3190px);
-                transform: perspective(3190px);
-                left:auto;
-                -webkit-box-shadow: 1px 1px 5px 0 rgba(26,26,67,.05), 39px 62.5px 125px -25px rgba(50,50,93,.5), 23.4px 37.5px 75px -37.5px rgba(0,0,0,.6);
-                box-shadow: 1px 1px 5px 0 rgba(26,26,67,.05), 39px 62.5px 125px -25px rgba(50,50,93,.5), 23.4px 37.5px 75px -37.5px rgba(0,0,0,.6);
-                -webkit-transform: scale(1.3) translateX(50px) translateY(0) perspective(3190px) rotateY(-29deg) rotateX(4deg) rotate(1deg);
-                transform: scale(1.3) translateX(50px) translateY(0) perspective(3190px) rotateY(-29deg) rotateX(4deg) rotate(1deg);
-                }
-            </style>
-            <section class="leyenda">
-                <div class="row">
-                    <div class="col-sm-5 contenido">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h1 for="">Administra tu <span>imprenta</span> más fácilmente</h1>
-                            </div>
-                        </div>
-                        <!-- <div class="row">
-                            <h2 class="col-sm-12">
-                            	Obten rápidamente los XML's de tus facturas emitidas y recibidas e intégralos a tu sistema.
-                            </h2>
-                            </div> -->
-                    </div>
-                    <div class="col-sm-7" style="text-align: center; padding-top: 150px;">
-                        <img id="imPrincipal" src="images/cherry_1-3.png" alt="">
-                    </div>
-                </div>
-            </section>
-            <style>
-                .box{
-                min-height: 200px;
-                border: 1px solid #ddd !important;
-                background-color: rgba(255,255,255,0.8);
-                box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
-                border-radius: 4px;
-                padding: 2px;
-                margin: 10px;
-                }
-                .number{
-                background-color: #fff;
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                text-align: center;
-                line-height: 60px;
-                font-size: 20px;
-                font-weight: bold;
-                margin-top: -30px;
-                margin: auto;
-                margin-top: -30px;
-                box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-                }
-                .header{
-                text-align: center;
-                font-weight: bold;
-                font-size: 26px;
-                margin-top: 10px;
-                }
-                .icon{
-                font-size: 80px;
-                text-align: center;
-                margin-top: 20px;
-                }
-            </style>
-            <section>
-                <div class="container">
-                    <div class="text-center">
-                        <h2>Tu negocio trabajando para tí. </h2>
-                        <p class="lead text-muted mt-2">Maneja cada proceso de tu negocio fácilmente por usuario, perfiles y sucursales </p>
-                        <a href="#" class="btn btn-primary">Como funciona</a>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-7 mx-auto mt-5"><img src="img/paneladministrador.png" alt="..." class="intro-image img-fluid" style="    margin-left: -70px;"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div style="background-image:linear-gradient(to top,#E13D25,#E54C2F); margin-bottom: 0px;">
-            <section class="bg-primary text-white backback" style="background-color: transparent !important;">
-                <div class="container">
-                    <div class="text-center">
-                        <h2>Todo lo necesario para administrar tu negocio en un solo sistema</h2>
-                        <br><br>
-                        <div class="row">
-                            <div class="col-lg-9 mx-auto">
-                                <!-- <p class="lead text-white mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. eiusmod tempor incididunt ut labore et dolore.</p> -->
-                                <img src="img/ecosistema.png" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                        <br><br><a href="#funciones" class="btn btn-outline-light opcion">Mas información</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <section class="bg-gray dMejora" style="padding-top:600px; padding-bottom: 600px;">
-            <style>
-                .mac {
-                position: absolute;
-                top: -350px;
-                max-width: 200%;
-                }
-            </style>
-            <div class="container text-center text-lg-left">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h2 class="divider-heading"><span style="color:#E13D25;">Mide</span> tu proyecto: <span style="color:#E13D25">mejora</span> tu proyecto</h2>
-                        <div class="row">
-                            <div class="col-lg-10">
-                                <p class="lead divider-subtitle mt-2 text-muted">Estadisticas y reportes al momento</p>
-                            </div>
-                        </div>
-                        <a href="#funciones" class="btn btn-primary opcion">Mas información</a>
-                    </div>
-                    <div class="col-md-12 col-lg-6 mt-5 mt-lg-0" style="position: relative;">
-                        <img src="img/macbook-pt.png" alt="" class="img-fluid mac" style="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="" style="margin-top:100px; position: relative; color:#fff;">
-            <style>
-                .trian1{
-                -webkit-transform: skewY(-12deg);
-                transform: skewY(-12deg);
-                -webkit-transform-origin: 0;
-                transform-origin: 0;
-                background: linear-gradient(150deg,#E03C25 15%,#EE4F21 50%,#C0360E 74%);
-                width: 100%;
-                height: 120%;
-                position: absolute;
-                }
-            </style>
-            <div class='trian1'></div>
-            <div class="container">
-                <div class="text-center">
-                    <h2 style="position: relative; color:#fff;">Cumple fechas de entrega</h2>
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <p class="lead text-muted mt-2" style="color:#fff !important; ">Identifica que procesos pueden estar atrasados y dale solución antes de la fecha de vencimiento.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="clients1 mt-5">
-                    <div class="row justify-content-md-center">
-                        <div class="col-lg-8 " style="text-align: center; display: inline-block;">
-                            <img src="img/punto-venta-imprenta-admiprint-produccion.png" alt="" class=" img-fluid" style="display: block;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="texttext" style="margin-top:400px;">
-            <style>
-                span{
-                color: #E13D25;
-                }
-            </style>
-            <!-- <div class='trian1' style="-webkit-transform: skewY(12deg);
-                transform: skewY(12deg);"></div> -->
-            <div class="container" style="position: relative;">
-                <div class="text-center">
-                    <div class="row">
-                        <div class="col-lg-8 ">
-                            <h2 style="z-index: 1;">Ahorra en <span>consumibles</span></h2>
-                            <p class="lead text-muted mt-2" style="">Identifica que consumible tienen mayor o menor rendimiento <br> <br> Podrás conocer el alcance de cada consumible y determinar si son o no redituables para tu negocio</p>
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="img/consumibles.png" style="" alt="" class="img-fluid imgConsu">
-                        </div>
-                    </div>
-                    <!-- <a href="#" class="btn btn-primary mt-4">Get Started</a> -->
-                </div>
-            </div>
-        </section>
-        <section id="funciones" style="background-color:  #f4f7f8 !important">
-            <style>
-                .box {
-                border: 1px solid #e2e2e2;
-                margin-bottom: 50px;
-                min-height: 450px;
-                letter-spacing: 1px;
-                padding: 3rem 2rem;
-                font-size: 11px; 
-                }
-                #funciones h3{
-                /* color: #58c5c7;
-                font-weight: bold; */
-                }
-                #funciones ul{
-                padding-right: 40px;
-                padding-left: 10px;
-                }
-                .box li{
-                list-style: none;
-                font-size: 1rem;
-                padding: 0px;
-                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgZmlsbD0iI2FmZjFiNiIvPjxwYXRoIGQ9Ik0xNC4zIDUuMjZsLTYuNDQgNi41OS0xLjc1LTJBLjkxLjkxIDAgMCAwIDQuNjkgMTFsMi4wNyAzLjUxYTEuMTEgMS4xMSAwIDAgMCAxLjg2IDBjLjMzLS40NCA2LjU1LTguMjQgNi41NS04LjI0Ljc2LS45LS4xNy0xLjY3LS44Ny0xLjAxeiIgZmlsbD0iIzE1OTU3MCIvPjwvc3ZnPg==);
-                background-repeat: no-repeat;
-                background-position-y: 5px;
-                padding-left: 30px;
-                margin-bottom: 20px;
-                }
-            </style>
-            <div class="container1" style="width:80%; max-width: 1400px; margin: auto;">
-                <div class="text-center">
-                    <h2>Todo lo que necesitas en <span>un mismo sistema</span></h2>
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <p class="lead text-muted mt-2">Olvídate de copiar y pegar información de un sistema a otro</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="integrations mt-5">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/empty-shopping-cart.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Ventas</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Realiza ventas fácilmente</li>
-                                    <li>Cobra en parcialidades</li>
-                                    <li>Programa fechas de entrega</li>
-                                    <li>Acepta pagos en efectivo,con tarjeta, cheque y depósitos</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/invoice.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Cotizaciones</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left">
-                                    <li>Envia cotizaciones desde el sistema</li>
-                                    <li>Retoma una cotización y vuelvela una venta</li>
-                                    <li>Programa fecha de seguimiento</li>
-                                    <li>Cancela una cotización después de su fecha de vencimiento</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/printer.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Máquinas y contadores</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left">
-                                    <li>Registra tus equipos de impresión</li>
-                                    <li>Contabiliza el número de impresiones por equipo</li>
-                                    <li>Reporta errores de impresión y mermas</li>
-                                    <li>Identifica el número de impresiones por corte</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/liquid-droplet-with-white-detail.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Consumibles</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Identifica el rendimiento</li>
-                                    <li>Registra la fecha de reposición</li>
-                                    <li>Identifica que equipo consume mas</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/tax.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Facturación</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Genera facturas 3.3 de tus ventas</li>
-                                    <li>Envía por correo Pdf y XML </li>
-                                    <li>Obtén al instante tu reporte mensual de facturación</li>
-                                    <li>Emite complementos de pago </li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/save-money.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Comisiones</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Administra las comisiones </li>
-                                    <li>Establece el %  de comision por sucursal </li>
-                                    <li>Define el % de comision por categoria</li>
-                                    <li>Identifica la comisión por usuario</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/box.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Almacenes comunes</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Concentra tu producción en un solo taller</li>
-                                    <li>Administra el almacén de cada taller</li>
-                                    <li>Identifica salidas por mermas</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/process.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Producción</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Da seguimiento a tus fechas de entrega</li>
-                                    <li>Observa en que status se encuentra cada orden</li>
-                                    <li>Identifica si una orden ya fue entregada</li>
-                                    <li>Reconoce que proceso esta siendo deficiente</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/cashier.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Caja</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Controla ingresos y egresos </li>
-                                    <li>Realiza cortes diarios y/o por semana </li>
-                                    <li>Identifica otros gastos</li>
-                                    <li>Consulta al momento el efectivo en todas tus sucursales</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/box.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Almacén</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Administra tus compras </li>
-                                    <li>Identifica existencias de productos e insumos</li>
-                                    <li>Trasfiere productos de una sucursal a otra</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="box text-center">
-                                <div class="icon d-flex align-items-end"><img src="img/supplies.png" alt="..." class="img-fluid"></div>
-                                <h3 class="h4">Insumos</h3>
-                                <p class="text-small font-weight-light">
-                                </p>
-                                <ul style="text-align: left;">
-                                    <li>Vende productos que engloban uno o mas insumos</li>
-                                    <li>Administra tu almacén de insumos</li>
-                                </ul>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
+        <section class="leyenda">
             <div class="row">
-                <style>
-                    .video{
-                    padding: 20px;
-                    text-align: center;
-                    }
-                </style>
-                <div class="col-sm-4">
-                    <div class="video">
-                        <h3>¿Que módulos tiene <span>Admiprint?</span></h3>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/I3ZGvJYScGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div  class="video">
-                        <h3>Agregando <span>productos</span></h3>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/PGKqQknlCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div  class="video">
-                        <h3>Mi primer <span>venta</span></h3>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/aYdzkulbcHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="seccionPrecios"  id="precios">
-            <style>
-                #seccionPrecios{
-                background-image: url("img/back-precios.png");
-                background-repeat: no-repeat;
-                background-size: 100%;
-                }
-            </style>
-            <div class="container">
-                <style>
-                    .paquete{
-                    min-height: 400px;
-                    border: 1px solid #ddd;
-                    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
-                    text-align: center;
-                    padding: 30px;
-                    letter-spacing: 1px;
-                    background-color: #fff;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-                    }
-                    .paquete h3{
-                    font-weight: bold;
-                    }
-                    .paquete .precio{
-                    font-size: 2.5rem;
-                    }
-                    .paquete ul li{
-                    list-style: none;
-                    font-size: 1rem;
-                    padding: 0px;
-                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgZmlsbD0iI2FmZjFiNiIvPjxwYXRoIGQ9Ik0xNC4zIDUuMjZsLTYuNDQgNi41OS0xLjc1LTJBLjkxLjkxIDAgMCAwIDQuNjkgMTFsMi4wNyAzLjUxYTEuMTEgMS4xMSAwIDAgMCAxLjg2IDBjLjMzLS40NCA2LjU1LTguMjQgNi41NS04LjI0Ljc2LS45LS4xNy0xLjY3LS44Ny0xLjAxeiIgZmlsbD0iIzE1OTU3MCIvPjwvc3ZnPg==);
-                    background-repeat: no-repeat;
-                    background-position-y: 5px;
-                    padding-left: 30px;
-                    margin-bottom: 20px;
-                    text-align: left;
-                    }
-                </style>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="paquete">
-                            <h3>Gratuito</h3>
-                            <div class="precio"><span>$0</span></div>
-                            <small>Prueba por 14 días</small>
-                            <hr>
-                            <ul>
-                                <li>Todas las funcionalidades disponibles </li>
-                                <li>Sin límite de usuarios</li>
-                                <li>Sin límite de sucursales</li>
-                                <li>Sin límite de productos</li>
-                                <li>Sin límite de ventas</li>
-                            </ul>
-                            <a href="#punto-venta-gratis" class="btn btn-primary  link-scroll">Abrir mi cuenta</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="paquete">
-                            <h3>Basico</h3>
-                            <div class="precio"><span>$300.00</span></div>
-                            <small>mxn mensual + IVA</small>
-                            <hr>
-                            <ul>
-                                <li>Ventas ilimitadas </li>
-                                <li>Control de caja</li>
-                                <li>Usuarios ilimitados</li>
-                                <li>Sucursales ilimitadas</li>
-                                <li>Recibe pagos en parcialidades</li>
-                                <li>Catálogo de clientes</li>
-                                <li>Manejo de almacén de productos</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="paquete">
-                            <h3>Completo</h3>
-                            <div class="precio"><span>$500.00</span></div>
-                            <small>mxn mensual + IVA</small>
-                            <hr>
-                            <ul>
-                                <li>Todo lo que incluye el plan básico +</li>
-                                <li>Cotizaciones </li>
-                                <li>Cálculo de comisiones</li>
-                                <li>Manejo de contadores</li>
-                                <li>Registro de consumibles</li>
-                                <li>Almacén de insumos</li>
-                                <li>Almacén común</li>
-                                <li>Procesos</li>
-                                <li>Facturación</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section style=" background-color: #f4f7f8 !important;" id="punto-venta-gratis" >
-            <style>
-                .error{
-                opacity: 0;
-                transition: all 0.5s;
-                color: #d00;
-                padding: 5px;
-                /* border: 1px solid #d00; */
-                font-size: 0.8rem;
-                border-top: 1px solid #d00;
-                }
-                .show{
-                opacity: 1 !important;
-                }
-            </style>
-            <div class="container" style="padding-top: 60px; padding-bottom: 120px;">
-                <h2 style="text-align: center;">Comenzar mi punto de venta <span>gratis</span> </h2>
-                <br><br>
-                <div class="row" style="position:relative;">
-                    <img src="img/cherry_1-3-hom.png" alt="" style="position: absolute; left:-80px;">
-                    <label for="" class="col-sm-2"></label>
-                    <label for="" class="col-sm-10">Nombre de tu negocio</label>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <input type="text" id="txNegocio" class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <div class="error errorNegocio">Ingresa el nombre de tu negocio</div>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 20px;">
-                    <label for="" class="col-sm-2"></label>
-                    <label for="" class="col-sm-10">Celular</label>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <input type="text" id="txCelular" class="form-control" maxlength="10">
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <div class="error errorCelular">Ingresa un número de celular válido</div>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 20px;">
-                    <label for="" class="col-sm-2"></label>
-                    <label for="" class="col-sm-10">Correo electrónico</label>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <input type="text" id="txCorreo" class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <div class="error errorEmail">Ingresa un correo válido </div>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 20px;">
-                    <label for="" class="col-sm-2"></label>
-                    <label for="" class="col-sm-10">Password </label>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <input type="password" id="txPassword" class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <div class="error errorPassword">Ingresa un password </div>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 20px;">
-                    <label for="" class="col-sm-2"></label>
-                    <label for="" class="col-sm-10">Confirma tu password</label>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <input type="password" id="txPassword2" class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6">
-                        <div class="error errorPassword2">El password y su confirmación no coincide </div>
-                    </div>
-                </div>
-                <style>
-                    .exito{
-                    border: 1px solid #0a0;
-                    background-color: rgba(0,200,0,0.1);
-                    padding: 20px;
-                    transition: all 0.5s;
-                    opacity: 0;
-                    display: none; 
-                    }
-                    .error2{
-                    opacity: 0;
-                    background-color: rgba(200,0,0,0.2);
-                    color:#d00;
-                    padding: 20px;
-                    display: none;
-                    }
-                </style>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6 exito">
-                        Generando tu punto de venta, espera un momento. &nbsp;&nbsp; <img src="img/008.gif" alt="">
-                    </div>
-                </div>
-                <div class="row">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6 error2">
-                        Se presento un error, por favor intente con otro negocio
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <input type="hidden" id="g-recaptcha-response">
-                    </div>
-                </div>
-                <div class="row" style="margin-top:20px;">
-                    <label for="" class="col-sm-2"></label>
-                    <div class="col-sm-6" style="text-align: right;">
-                        <button class="btn btn-primary" id="btIniciar">Abrir mi punto de venta</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section style="background-color:#f4f7f8; border-bottom: solid 1px #e9f0f3; padding-top: :80px; padding-bottom: 80px;">
-            <div class="container" style="text-align: center;">
-                <h4>Ya decidieron dar el siguiente paso con nosotros</h4>
-                <br>
-                <div class="row">
-                    <div class="col-sm-2" style="padding-top: 50px;">
-                        <img src="img/logo.png" alt="" style="width: 90%; max-width: 200px;">
-                    </div>
-                    <div class="col-sm-2">
-                        <img src="img/logo-erprint.png" alt="" style="width: 90%; max-width: 200px;">
-                    </div>
-                    <div class="col-sm-2" style="padding-top: 50px;">
-                        <img src="img/logo-login.png" alt="" style="width: 90%; max-width: 200px;">
-                    </div>
-                    <div class="col-sm-2" style="padding-top: 40px;">
-                        <img src="img/logo-nodo.png" alt="" style="width: 90%; max-width: 200px;">
-                    </div>
-                    <div class="col-sm-2" style="padding-top: 40px;">
-                        <img src="img/image.png" alt="" style="width: 90%; max-width: 200px;">
-                    </div>
-                    <div class="col-sm-2" style="padding-top: 10px;">
-                        <img src="img/logo-min.png" alt="" style="width: 90%; max-width: 200px;">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="main-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 mb-5 mb-lg-0">
-                        <div class="footer-logo"><img src="img/logo-adminprint-min.png" alt="..." class="img-fluid"></div>
-                    </div>
-                    <div class="col-lg-3 mb-5 mb-lg-0">
-                        <h5 class="footer-heading">Secciones</h5>
-                        <ul class="list-unstyled">
-                            <li> <a href="#inicio" class="footer-link opcion">Inicio</a></li>
-                            <li> <a href="#funciones" class="footer-link opcion">Funciones</a></li>
-                            <li> <a href="contacto.html" class="footer-link">Contacto</a></li>
-                            <li> <a href="#" class="footer-link">Comenzar ahora</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 mb-5 mb-lg-0">
-                        <h5 class="footer-heading">Módulos</h5>
-                        <ul class="list-unstyled">
-                            <li> <a href="#" class="footer-link">Ventas</a></li>
-                            <li> <a href="#" class="footer-link">Producción</a></li>
-                            <li> <a href="#" class="footer-link">Almacén</a></li>
-                            <li> <a href="#" class="footer-link">Comisiones</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h5 class="footer-heading">Otros productos</h5>
-                        <ul class="list-unstyled">
-                            <li> <a href="https://www.sattira.com" class="footer-link">Sattira.com descarga de XML's</a></li>
-                            <li> <a href="#" class="footer-link">XXX</a></li>
-                            <!--                        <li> <a href="#" class="footer-link">Guides</a></li>
-                                <li> <a href="#" class="footer-link">Partners</a></li>-->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="copyrights">
-                <div class="container">
+                <div class="col-sm-5 contenido">
                     <div class="row">
-                        <div class="col-lg-6 text-center text-lg-left">
-                            <p class="copyrights-text mb-3 mb-lg-0">© Todos los derechos reservados.</p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        <div class="col-sm-12">
+                            <h1 for="">Administra tu <span>imprenta</span> más fácilmente</h1>
                         </div>
-                        <div class="col-lg-6 text-center text-lg-right">
-                            <ul class="list-inline social mb-0">
-                                <li class="list-inline-item">
-                                    <a href="#" class="social-link"><i class="fa fa-youtube-play"></i></a>
-                                </li>
+                    </div>
+                    <!-- <div class="row">
+                    <h2 class="col-sm-12">
+                    Obten rápidamente los XML's de tus facturas emitidas y recibidas e intégralos a tu sistema.
+                </h2>
+            </div> -->
+        </div>
+        <div class="col-sm-7" style="text-align: center; padding-top: 150px;">
+            <img id="imPrincipal" src="images/cherry_1-3.png" alt="">
+        </div>
+    </div>
+</section>
+<style>
+.box{
+    min-height: 200px;
+    border: 1px solid #ddd !important;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 2px;
+    margin: 10px;
+}
+.number{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -30px;
+    margin: auto;
+    margin-top: -30px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+.header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 10px;
+}
+.icon{
+    font-size: 80px;
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+</div>
+<div style="background-image:linear-gradient(to top,#E13D25,#E54C2F); margin-bottom: 0px;">
+    <section id="funciones" class="bg-gray dMejora" style="padding-top:50px; padding-bottom: 50px;">
+        <style>
+        .mac {
+            position: absolute;
+            top: -350px;
+            max-width: 200%;
+        }
+        <style>
+               .box {
+               border: 1px solid #e2e2e2;
+               margin-bottom: 50px;
+               min-height: 450px;
+               letter-spacing: 1px;
+               padding: 3rem 2rem;
+               font-size: 11px;
+               }
+               #funciones h3{
+               /* color: #58c5c7;
+               font-weight: bold; */
+               }
+               #funciones ul{
+               padding-right: 40px;
+               padding-left: 10px;
+               }
+               .box li{
+               list-style: none;
+               font-size: 1rem;
+               padding: 0px;
+               background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgZmlsbD0iI2FmZjFiNiIvPjxwYXRoIGQ9Ik0xNC4zIDUuMjZsLTYuNDQgNi41OS0xLjc1LTJBLjkxLjkxIDAgMCAwIDQuNjkgMTFsMi4wNyAzLjUxYTEuMTEgMS4xMSAwIDAgMCAxLjg2IDBjLjMzLS40NCA2LjU1LTguMjQgNi41NS04LjI0Ljc2LS45LS4xNy0xLjY3LS44Ny0xLjAxeiIgZmlsbD0iIzE1OTU3MCIvPjwvc3ZnPg==);
+               background-repeat: no-repeat;
+               background-position-y: 5px;
+               padding-left: 30px;
+               margin-bottom: 20px;
+               }
+           </style>
+        </style>
+
+        <div class="container1" style="width:80%; max-width: 1400px; margin: auto;">
+            <div class="text-center">
+                <h2>SyAdmin tiene todo lo necesario para administrar tu negocio en un solo sistema</h2>
+                </div>
+            <div class="integrations mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/empty-shopping-cart.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Ventas</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left;">
+                                <li>Realiza ventas fácilmente</li>
+                                <li>Cobra en parcialidades (ANTICIPOS)</li>
+                                <li>Programa fechas de entrega</li>
+                                <li>Acepta pagos en efectivo,con tarjeta, cheque y depósitos</li>
                             </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/invoice.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Cotizaciones</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left">
+                                <li>Envia cotizaciones desde el sistema</li>
+                                <li>Retoma una cotización y vuelvela una venta</li>
+                                <li>Programa fecha de seguimiento</li>
+                                <li>Cancela una cotización después de su fecha de vencimiento</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/printer.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Promocionales/Lonas</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left">
+                                <li>Cálcula el costo de venta de los m<sup>2</sup> al vender lonas, Vinil, Recorte de Vinilo. </li>
+                                <li>Categoriza tus productos</li>
+                                <li>Gestiona Precio de Maquila y Precio de Venta al Publico</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/supplies.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Almacén</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left;">
+                                <li>Administra tus compras </li>
+                                <li>Identifica existencias de productos e insumos</li>
+                                <li>Trasfiere productos de una sucursal a otra</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/cashier.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Caja</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left;">
+                                <li>Controla ingresos y egresos </li>
+                                <li>Realiza cortes diarios y/o por semana </li>
+                                <li>Identifica otros gastos</li>
+                                <li>Consulta al momento el efectivo en todas tus sucursales</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/process.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Producción</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left;">
+                                <li>Da seguimiento a tus fechas de entrega</li>
+                                <li>Observa en que status se encuentra cada orden</li>
+                                <li>Identifica si una orden ya fue entregada</li>
+                                <li>Reconoce que proceso esta siendo deficiente</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/tax.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Reportes</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left;">
+                                <li>Mensuales</li>
+                                <li>Diarios</li>
+                                <li>Producto de mayor venta</li>
+                                <li>Gastos</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/save-money.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Clientes y Proveedores</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left;">
+                                <li>Genera base de datos de clientes y proveedores</li>
+                                <li>Nombre</li>
+                                <li>Teléfono</li>
+                                <li>Correo electrónico</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box text-center">
+                            <div class="icon d-flex align-items-end"><img src="img/box.png" alt="..." class="img-fluid"></div>
+                            <h3 class="h4">Asigna Ordenes De Trabajo</h3>
+                            <p class="text-small font-weight-light">
+                            </p>
+                            <ul style="text-align: left;">
+                                <li>Asigna a un diseñador las ordenes de trabajo</li>
+                                <li>Controla el Proceso de cada trabajo</li>
+                                <li>Genera base de datos de todas las ordenes</li>
+                            </ul>
+                            <p></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <script src="js/generarCuenta.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#txCelular").keydown(function(e) {
-                    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
-                        (e.keyCode == 65 && e.ctrlKey === true) ||
-                        (e.keyCode >= 35 && e.keyCode <= 39)) {
-                        return;
-                    }
-            
-                    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-                        e.preventDefault();
-                    }
-                });
-            
-            setTimeout(function(){
-            $(".hoverl_6R").click();
-            },7000);
-            });
-        </script>
-    </body>
+        </div>
+    </section>
+</div>
+
+<section id="adquierelo" >
+    <style>
+    #adquierelo{
+        background-image: url("img/back-precios.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    </style>
+    <div class="container">
+        <style>
+        .paquete{
+            min-height: 400px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 30px;
+            letter-spacing: 1px;
+            background-color: #fff;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .paquete h3{
+            font-weight: bold;
+        }
+        .paquete .precio{
+            font-size: 2.5rem;
+        }
+        .paquete ul li{
+            list-style: none;
+            font-size: 1rem;
+            padding: 0px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgZmlsbD0iI2FmZjFiNiIvPjxwYXRoIGQ9Ik0xNC4zIDUuMjZsLTYuNDQgNi41OS0xLjc1LTJBLjkxLjkxIDAgMCAwIDQuNjkgMTFsMi4wNyAzLjUxYTEuMTEgMS4xMSAwIDAgMCAxLjg2IDBjLjMzLS40NCA2LjU1LTguMjQgNi41NS04LjI0Ljc2LS45LS4xNy0xLjY3LS44Ny0xLjAxeiIgZmlsbD0iIzE1OTU3MCIvPjwvc3ZnPg==);
+            background-repeat: no-repeat;
+            background-position-y: 5px;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        </style>
+        <div class="row">
+            <style>
+            .video{
+                padding: 20px;
+                text-align: center;
+            }
+            </style>
+            <div class="col-sm-12">
+                <div  class="video">
+                    <h3>Como <span>Adquirirlo</span></h3>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/PGKqQknlCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <a href="#punto-venta-gratis" class="btn btn-primary  link-scroll">Pagar En Paypal</a>
+
+    </div>
+</section>
+<section style=" background-color: #f4f7f8 !important;" id="contacto" >
+    <style>
+    .error{
+        opacity: 0;
+        transition: all 0.5s;
+        color: #d00;
+        padding: 5px;
+        /* border: 1px solid #d00; */
+        font-size: 0.8rem;
+        border-top: 1px solid #d00;
+    }
+    .show{
+        opacity: 1 !important;
+    }
+    </style>
+    <div class="container" style="padding-top: 0px; padding-bottom: 20px;">
+        <h2 style="text-align: center;">Te Contactamos</h2>
+        <br><br>
+        <div class="row" style="position:relative;">
+            <img src="img/cherry_1-3-hom.png" alt="" style="position: absolute; left:-80px;">
+            <label for="" class="col-sm-2"></label>
+            <label for="" class="col-sm-10">Nombre de tu negocio</label>
+        </div>
+        <div class="row">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6">
+                <input type="text" id="txNegocio" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6">
+                <div class="error errorNegocio">Ingresa el nombre de tu negocio</div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <label for="" class="col-sm-2"></label>
+            <label for="" class="col-sm-10">Celular</label>
+        </div>
+        <div class="row">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6">
+                <input type="text" id="txCelular" class="form-control" maxlength="10">
+            </div>
+        </div>
+        <div class="row">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6">
+                <div class="error errorCelular">Ingresa un número de celular válido</div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <label for="" class="col-sm-2"></label>
+            <label for="" class="col-sm-10">Correo electrónico</label>
+        </div>
+        <div class="row">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6">
+                <input type="text" id="txCorreo" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6">
+                <div class="error errorEmail">Ingresa un correo válido </div>
+            </div>
+        </div>
+        <style>
+        .exito{
+            border: 1px solid #0a0;
+            background-color: rgba(0,200,0,0.1);
+            padding: 20px;
+            transition: all 0.5s;
+            opacity: 0;
+            display: none;
+        }
+        .error2{
+            opacity: 0;
+            background-color: rgba(200,0,0,0.2);
+            color:#d00;
+            padding: 20px;
+            display: none;
+        }
+        </style>
+        <div class="row">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6 exito">
+                Generando tu solicitud, espera un momento. &nbsp;&nbsp; <img src="img/008.gif" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6 error2">
+                Se presento un error, por favor intente con otro negocio
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <input type="hidden" id="g-recaptcha-response">
+            </div>
+        </div>
+        <div class="row" style="margin-top:20px;">
+            <label for="" class="col-sm-2"></label>
+            <div class="col-sm-6" style="text-align: right;">
+                <button class="btn btn-primary" id="btIniciar">Enviar Solicitud</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="background-color:#f4f7f8; border-bottom: solid 1px #e9f0f3; padding-top: :80px; padding-bottom: 80px;">
+    <div class="container" style="text-align: center;">
+        <h4>Ya decidieron dar el siguiente paso con nosotros</h4>
+        <br>
+        <div class="row">
+            <div class="col-sm-2" style="padding-top: 50px;">
+                <img src="img/logo.png" alt="" style="width: 90%; max-width: 200px;">
+            </div>
+            <div class="col-sm-2">
+                <img src="img/logo-erprint.png" alt="" style="width: 90%; max-width: 200px;">
+            </div>
+            <div class="col-sm-2" style="padding-top: 50px;">
+                <img src="img/logo-login.png" alt="" style="width: 90%; max-width: 200px;">
+            </div>
+            <div class="col-sm-2" style="padding-top: 40px;">
+                <img src="img/logo-nodo.png" alt="" style="width: 90%; max-width: 200px;">
+            </div>
+            <div class="col-sm-2" style="padding-top: 40px;">
+                <img src="img/image.png" alt="" style="width: 90%; max-width: 200px;">
+            </div>
+            <div class="col-sm-2" style="padding-top: 10px;">
+                <img src="img/logo-min.png" alt="" style="width: 90%; max-width: 200px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/generarCuenta.js"></script>
+<script>
+$(document).ready(function() {
+    $("#txCelular").keydown(function(e) {
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+        (e.keyCode == 65 && e.ctrlKey === true) ||
+        (e.keyCode >= 35 && e.keyCode <= 39)) {
+            return;
+        }
+
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+
+    setTimeout(function(){
+        $(".hoverl_6R").click();
+    },7000);
+});
+</script>
+</body>
 </html>

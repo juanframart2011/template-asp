@@ -714,9 +714,11 @@ STYLE SWITCHER FOR DEMO
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #E13D25;
-  border-color: #E13D25;
+  color: #E13D25;
+  background-color: #fff;
+  border-color: #fff;
+  position: absolute;
+  left:40%;
 }
 
 .btn-primary:hover {
@@ -2350,4 +2352,8 @@ code {
 
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #6c757d;
+}
+
+.video h3{
+    color:#fff;
 }
