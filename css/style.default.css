@@ -20,7 +20,7 @@
 }
 
 .btn-outline-light:hover {
-  color: #E7475E !important;
+  color: #7A122E !important;
 }
 
 section {
@@ -57,7 +57,7 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #E7475E;
+  background: #7A122E;
   display: block;
   opacity: 1;
   padding: 0;
@@ -83,11 +83,11 @@ button {
 }
 
 .breadcrumb li.breadcrumb-item {
-  color: #999;
+  color: #fff;
 }
 
 .form-group label {
-  color: #555;
+  color: #f4f7f8;
   font-weight: 400;
   font-size: 1.05rem;
 }
@@ -96,11 +96,11 @@ button {
   width: 2rem;
   height: 2rem;
   line-height: 2rem;
-  background: #E7475E;
+  background: #7A122E;
   color: #fff;
   text-align: center;
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 1.2rem;
   border-radius: 50%;
   font-size: 0.85rem;
 }
@@ -177,7 +177,7 @@ nav.navbar .dropdown-menu {
 */
 footer.main-footer {
   padding: 7rem 0;
-  background: #E13D25;
+  background: #7A122E;
   color: #fff;
   padding-bottom: 0;
 }
@@ -332,7 +332,7 @@ STYLE SWITCHER FOR DEMO
   width: 2.8rem;
   height: 2.8rem;
   margin: 0 auto;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /*
@@ -404,7 +404,7 @@ STYLE SWITCHER FOR DEMO
   border-radius: 0;
   border: none;
   margin-bottom: 1.3rem;
-  background: linear-gradient(45deg, #E7475E, #fc324f);
+  background: linear-gradient(45deg, #7A122E, #7A122E);
 }
 
 .accordion-custom .card-header {
@@ -474,13 +474,13 @@ STYLE SWITCHER FOR DEMO
 }
 
 .sidebar .search .form-control:focus {
-  border-color: #E7475E;
+  border-color: #7A122E;
 }
 
 .sidebar .search .form-control:focus + button {
-  background: #E7475E;
+  background: #7A122E;
   color: #fff;
-  border-color: #E7475E;
+  border-color: #7A122E;
 }
 
 .sidebar .search button {
@@ -506,13 +506,13 @@ STYLE SWITCHER FOR DEMO
 }
 
 .categories-link {
-  color: #777;
+  color: #C1C1C1;
   text-decoration: none;
   margin-bottom: 0.5rem;
 }
 
 .categories-link:hover {
-  color: #E7475E;
+  color: #7A122E;
   text-decoration: none;
 }
 
@@ -524,7 +524,7 @@ STYLE SWITCHER FOR DEMO
 }
 
 .tag-link:hover {
-  background: #E7475E;
+  background: #7A122E;
   color: #fff;
   text-decoration: none;
 }
@@ -1349,7 +1349,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 h2,

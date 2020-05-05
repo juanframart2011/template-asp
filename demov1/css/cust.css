@@ -1,0 +1,11 @@
+.contrato select,input{
+	border: 0px !important; 
+}
+.contrato  h4{
+
+	text-align: center !important;
+
+}
+.cuerpo{
+	text-align: justify-all;
+}
